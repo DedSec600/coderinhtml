@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Nunito&family=Ubuntu:wght@700&display=swap');   
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #eff3f4;
+    }
+    .card {
+      width: 320px;
+      height: 420px;
+      text-align: center;
+      background: url(https://i.pinimg.com/originals/92/c5/b2/92c5b20f647f2b2d546ee54131f18148.gif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+      position: relative;
+      border-radius: 5px;
+      border: 2px solid #fff;
+      box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+      transition: 0.5s;
+    }
+    .card.act {
+      background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://i.pinimg.com/originals/92/c5/b2/92c5b20f647f2b2d546ee54131f18148.gif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-color: #195083;
+      transition: 0.5s;
+    }
+    .card .caption {
+      width: 100%;
+      padding: 10px;
+      margin-top: 340px;
+      background: #fff;
+      overflow: hidden;
+      transition: 0.5s;
+    }
+    .card .caption h1 {
+      padding-top: 10px;
+      padding-bottom: 25px;
+      font-family:'Nunito';
+    }
+    .card .caption p{
+        font-family:'Cabin';
+    }
+    .card .btn {
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      margin: 0 auto;
+      background: #fff;
+      position: absolute;
+      content: '';
+      left: 42%;
+      bottom: 51px;
+      border-radius: 50%;
+      z-index: 3;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: 0.5s;
+    }
+    .card .btn:before {
+      position: absolute;
+      content: '';
+      top: 47%;
+      left: 26%;
+      width: 50%;
+      height: 2px;
+      background: #000;
+      border-radius: 5px;
+    }
+    .card .btn:after {
+      position: absolute;
+      content: '';
+      top: 25%;
+      left: 48%;
+      height: 50%;
+      width: 2px;
+      background: #000;
+      border-radius: 5px;
+    }
+
+    .card .caption .line {
+      width: 96%;
+      height: 2px;
+      background: #ddd;
+      margin: 15px auto;
+      margin-bottom: 20px;
+    }
+    .card .caption a {
+      padding: 8px 100px;
+      text-decoration: none;
+      background: #195083;
+      color: #fff;
+      font-family:'Cabin';
+      border-radius: 25px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      overflow: hidden;
+      position: relative;
+    }
+       .card .caption a:hover:after {
+      transition: 0.5s;
+      bottom: 0;
+      visibility: visible;
+      opacity: 1;
+    }
+  
+      mark {
+ background: yellow;
+	border-radius: 15px;
+	border-left: dashed;
+	border-right: dashed;
+	border-top: dashed;
+	border-bottom: dashed;
+	border-width: 1px;
+	border-color: red;
+}
+  .telegram {
+     background: black;
+     color: white;
+
+}
+
+  .facebook {
+     background: black;
+     color: white;
+
+}
+
+ .twitter{
+     background: black;
+     color: white;
+
+}
+ .instagram{
+     background: black;
+     color: white;
+
+}
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title> Personal Card </title>
+  </head>
+  <body>
+    <div class="card">
+      <div class="btn"></div>
+      <div class="caption">
+        <h1>𝔻𝕖𝕕𝕤𝕖𝕔</h1>
+
+        <h5>•Ethical Hacker<br />•Programmer<br />•Web Developer<br />•Gammer<br />•Memer</h5>
+    </div>
+
+    <script type="text/javascript">
+      var card = document.querySelector(".card");
+      var btn = document.querySelector(".btn");
+      var box = document.querySelector(".caption");
+      var m = 0;
+      btn.addEventListener('click', () => {
+        if (m == 0) {
+          m = 1;
+          card.classList.add("act");
+          btn.style.transform = "rotate(-405deg)";
+          btn.style.bottom = "303px"
+          box.style.marginTop = "88px";
+        } else {
+          m = 0;
+          card.classList.remove("act");
+          btn.style.transform = "rotate(0deg)";
+          btn.style.bottom = "51px";
+          box.style.marginTop = "340px";
+        }
+      })
+    </script>
+<h4><mark>Follow Me</mark></h4>
+
+<fieldset>
+<h2><a href="https://mobile.twitter.com/Ragnar790" class="twitter"><i class="fa fa-twitter"></i></a></h2>
+</fieldset>
+
+<fieldset>
+<h2><a href="https://www.instagram.com/coder_in_html" class="instagram"><i class="fa fa-instagram"></i></a></h2>
+</fieldset>
+
+<fieldset>
+<h2><a href="https://www.facebook.com/Ded.sec.6005" class="facebook"><i class="fa fa-facebook"></i></a></h2>
+</fieldset>
+
+<fieldset>
+<h2><ahref="https://t.me/hshuziwkqshusiqnsbz" class="telegram"><i class="fa fa-telegram"></i></a></h2>
+</fieldset>
+
+  </body>
+</html>
